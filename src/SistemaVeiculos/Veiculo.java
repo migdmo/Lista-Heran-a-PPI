@@ -1,6 +1,6 @@
 package SistemaVeiculos;
 
-public class Veiculo {
+public abstract class Veiculo {
     protected String marca, modelo;
     protected float velocidade;
 
@@ -13,12 +13,9 @@ public class Veiculo {
         this.velocidade = velocidade;
     }
 
-    public void mover(){
-        System.out.println("Veículo se movendo...");
-    }
-    public void abastecer(){
-        System.out.println("Veículo reabastecendo...");
-    }
+    public abstract void mover();
+
+    public abstract  void abastecer();
 
     public String getMarca() {
         return marca;
